@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # }
 
 import os
-import dj_database_url  # Optional, for easier database config
+import dj_database_url  # type: ignore # Optional, for easier database config
 
 DATABASES = {
     'default': dj_database_url.config(
@@ -166,11 +166,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'users.CustomUser'  
+AUTH_USER_MODEL = 'users.CustomUser'
 
-media_root = BASE_DIR / 'media'
-media_url = '/media/'
-
+# Media files (Images, etc.)
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackends"
 EMAIL_HOST = "smtp.gmail.com"
