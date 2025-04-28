@@ -61,7 +61,11 @@ REST_FRAMEWORK = {
 }
 
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'https://blood-donation-smoky-rho.vercel.app',  # Replace with your Vercel frontend URL
+    'http://localhost:3000',            # For local development
+]
+CORS_ALLOW_ALL_ORIGINS = False
 
 from datetime import timedelta
 
