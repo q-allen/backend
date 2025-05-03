@@ -173,7 +173,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
 # Media files (Images, etc.)
-MEDIA_URL = '/media/'
+MEDIA_URL = 'https://backend-bwoh.onrender.com/media/' if not DEBUG else '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackends"
