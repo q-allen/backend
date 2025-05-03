@@ -15,8 +15,7 @@ SECRET_KEY = 'django-insecure-^10aeas6j^pvjsz4cs_)69jesnw)0cbf^srn^j5hw_eoeqn@%f
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
-
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'backend-bwoh.onrender.com',
@@ -174,7 +173,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
 # Media files (Images, etc.)
-MEDIA_URL = 'https://backend-bwoh.onrender.com/media/' if not DEBUG else '/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackends"
